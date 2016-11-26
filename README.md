@@ -12,7 +12,7 @@ Create `.eslintrc` file in the root of your project:
 
     ```JSON
     {
-        "extends": "./node_modules/codestyle/.eslint"
+        "extends": "./node_modules/codestyle/.eslintrc"
     }
     ```
 
@@ -20,6 +20,6 @@ Create `.eslintrc` file in the root of your project:
 
     ```JSON
     {
-        "extends": "./node_modules/codestyle/.react-eslint"
+        "extends": "./node_modules/codestyle/.react-eslintrc"
     }
     ```
