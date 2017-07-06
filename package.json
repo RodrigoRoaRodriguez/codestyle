@@ -1,26 +1,27 @@
 {
   "name": "codestyle",
-  "version": "20.2.1",
+  "version": "21.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeoGears/codestyle.git"
   },
   "description": "ESLint configuration used at Gears of Leo",
   "scripts": {
-    "lint": "eslint test/* *.js",
-    "lint-fix": "eslint test/* *.js --fix",
-    "test": "istanbul cover node_modules/mocha/bin/_mocha -- --full-trace test/* test/**/*",
-    "ci": "istanbul cover _mocha -- -R tap test/* test/**/* > test-results.tap && istanbul report clover",
-    "prepublish": "npm run lint && npm run test"
+    "lint": "node_modules/.bin/eslint test/* *.js",
+    "lint-react": "node_modules/.bin/eslint -c .react-eslintrc test/* *.js",
+    "lint-fix": "node_modules/.bin/eslint test/* *.js --fix",
+    "test": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --full-trace test/* test/**/*",
+    "ci": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R tap test/* test/**/* > test-results.tap && node_modules/.bin/istanbul report clover",
+    "prepublish": "npm run lint && npm run lint-react && npm run test"
   },
   "engines": {
     "node": ">=6.0.0",
     "npm": ">=3.0.0"
   },
   "contributors": [
-    "Mikael Abrahamsson <mikael.abrahamsson@gutro.se>",
-    "Sebastian Stenerdal <sebastian.stenerdal@gutro.se>",
-    "Enzo Martin <enzo.martin@gutro.se>"
+    "Mikael Abrahamsson <mikael.abrahamsson@leovegas.com>",
+    "Sebastian Stenerdal <sebastian.stenerdal@leovegas.com>",
+    "Enzo Martin <enzo.martin@leovegas.com>"
   ],
   "keywords": [
     "codestyle",
@@ -32,14 +33,15 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "babel-eslint": "^7.0.0"
+    "babel-eslint": "^7.1.1"
   },
   "devDependencies": {
-    "mocha": "^3.0.0",
-    "eslint": "^3.0.1",
-    "istanbul": "^0.4.2"
+    "eslint": "^4.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2"
   },
   "peerDependency": {
-    "eslint": "^3.0.1"
+    "eslint": ">= 4"
   }
 }

@@ -1,6 +1,6 @@
 # Codestyle
 
-Uses eslint `3.x`
+Uses eslint `4.x`
 
 ```
 npm install codestyle --save-dev
