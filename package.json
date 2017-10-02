@@ -1,5 +1,7 @@
 {
   "name": "codestyle",
+  "isService": false,
+  "maintainerTeam": "everyone",
   "version": "21.1.0",
   "repository": {
     "type": "git",
