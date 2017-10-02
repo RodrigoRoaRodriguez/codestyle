@@ -10,9 +10,10 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
     "lint-react": "eslint -c .react-eslintrc .",
-    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --full-trace --recursive",
-    "ci": "istanbul cover node_modules/mocha/bin/_mocha -- -R tap --full-trace --recursive > test-results.tap && istanbul report clover",
-    "prepare": "npm run lint && npm run lint-react && npm run test"
+    "test": "nyc mocha --full-trace --recursive",
+    "ci": "nyc mocha -R tap --full-trace --recursive > test-results.tap && nyc report",
+    "prepare": "npm run lint && npm run lint-react && npm run test",
+    "test-watch": "nyc mocha --full-trace --recursive -w"
   },
   "engines": {
     "node": ">=6.0.0",
@@ -43,5 +44,8 @@
   },
   "peerDependency": {
     "eslint": ">= 4"
+  },
+  "optionalDependencies": {
+    "@leogears/leo-base-repo-files": "^2.50.4"
   }
 }
