@@ -1,18 +1,18 @@
 {
   "name": "codestyle",
-  "version": "21.0.0",
+  "version": "21.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeoGears/codestyle.git"
   },
-  "description": "ESLint configuration used at Gears of Leo",
+  "description": "ESLint configuration used at Gears of Leo / LeoVegas",
   "scripts": {
-    "lint": "node_modules/.bin/eslint test/* *.js",
-    "lint-react": "node_modules/.bin/eslint -c .react-eslintrc test/* *.js",
-    "lint-fix": "node_modules/.bin/eslint test/* *.js --fix",
-    "test": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --full-trace test/* test/**/*",
-    "ci": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R tap test/* test/**/* > test-results.tap && node_modules/.bin/istanbul report clover",
-    "prepublish": "npm run lint && npm run lint-react && npm run test"
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "lint-react": "eslint -c .react-eslintrc .",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --full-trace --recursive",
+    "ci": "istanbul cover node_modules/mocha/bin/_mocha -- -R tap --full-trace --recursive > test-results.tap && istanbul report clover",
+    "prepare": "npm run lint && npm run lint-react && npm run test"
   },
   "engines": {
     "node": ">=6.0.0",
@@ -33,13 +33,13 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "babel-eslint": "^7.1.1"
+    "babel-eslint": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.1.1",
-    "eslint-plugin-react": "^7.1.0",
+    "eslint": "^4.8.0",
+    "eslint-plugin-react": "^7.4.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2"
+    "mocha": "^3.5.3"
   },
   "peerDependency": {
     "eslint": ">= 4"
