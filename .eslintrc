@@ -118,7 +118,7 @@
     "no-undef": 2,
     "no-undefined": 0,
     "no-use-before-define": 2,
-    "eol-last": 0,
+    "eol-last": ["error", "always"],
     "func-names": 0,
     "func-style": [2, "declaration", {
       "allowArrowFunctions": true
