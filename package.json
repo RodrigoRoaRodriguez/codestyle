@@ -2,7 +2,7 @@
   "name": "codestyle",
   "isService": false,
   "maintainerTeam": "everyone",
-  "version": "21.1.0",
+  "version": "21.2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeoGears/codestyle.git"
@@ -39,10 +39,10 @@
     "babel-eslint": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.8.0",
+    "eslint": "^4.10.0",
     "eslint-plugin-react": "^7.4.0",
-    "mocha": "^3.5.3",
-    "nyc": "^11.2.1"
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0"
   },
   "peerDependency": {
     "eslint": ">= 4"
