@@ -2,7 +2,7 @@
   "name": "codestyle",
   "isService": false,
   "maintainerTeam": "everyone",
-  "version": "21.2.0",
+  "version": "21.3.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeoGears/codestyle.git"
